@@ -20,7 +20,8 @@ namespace Assets.Scripts.UI
             }
         }
 
-        protected void OnClick() {
+        protected void OnClick()
+        {
             if (onClick != null)
             {
                 onClick(gameObject);
@@ -31,7 +32,7 @@ namespace Assets.Scripts.UI
         {
             if (onValueChanged != null)
             {
-                onValueChanged(gameObject,value);
+                onValueChanged(gameObject, value);
             }
 
         }

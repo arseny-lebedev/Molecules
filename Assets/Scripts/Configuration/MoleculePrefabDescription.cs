@@ -1,7 +1,8 @@
 ﻿using System;
+using Assets.Scripts.Core;
 using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Configuration
 {
     [Serializable]
     public class MoleculePrefabDescription

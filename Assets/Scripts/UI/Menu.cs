@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.UI;
+using Assets.Scripts.View;
 using UnityEngine;
 
 public class Menu : MonoBehaviour

@@ -1,4 +1,6 @@
-﻿using UnityEditor.SceneManagement;
+﻿using Assets.Scripts.Configuration;
+using Assets.Scripts.Core;
+using Assets.Scripts.View;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -24,7 +26,7 @@ namespace Assets.Scripts
         {
             _molecularModelFactory = new MolecularModelFactory();
             _molecularModelFactory.SetConfiguration(_molecularModelConfiguration);
-            _bordersView.SetConfigarations(_bordersViewConfiguration);
+            _bordersView.SetConfigurations(_bordersViewConfiguration);
             _moleculesPool = gameObject.AddComponent<MoleculesPool>();
             _moleculesPool.SetConfiguration(_moleculesPoolConfiguration, _moleculesParrent);
             _simulation.SetConfiguration(_moleculesPool);

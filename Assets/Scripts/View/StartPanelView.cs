@@ -1,8 +1,9 @@
 ﻿using System;
+using Assets.Scripts.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.UI
+namespace Assets.Scripts.View
 {
     public class StartPanelView : MonoBehaviour
     {
@@ -34,13 +35,13 @@ namespace Assets.Scripts.UI
 
         void Start()
         {
-        
+
         }
 
         // Update is called once per frame
         void Update()
         {
-        
+
         }
     }
 }

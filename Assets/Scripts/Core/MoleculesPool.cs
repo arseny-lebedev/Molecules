@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using Assets.Scripts.Configuration;
 using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Core
 {
     public class MoleculesPool:MonoBehaviour
     {

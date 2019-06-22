@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Configuration
 {
     [CreateAssetMenu(fileName = "Molecular Model Configuration", menuName = @"Scriptable Object/ Molecular Model Configuration")]
-    public class MolecularModelConfiguration:ScriptableObject
+    public class MolecularModelConfiguration : ScriptableObject
     {
         public int MinMoleculesCount;
         public int MaxMoleculesCount;

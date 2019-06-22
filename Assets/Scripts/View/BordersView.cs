@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Configuration;
+using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.View
 {
     public class BordersView : MonoBehaviour
     {
@@ -8,7 +9,7 @@ namespace Assets.Scripts
 
         private BordersViewConfiguration _configuration;
 
-        public void SetConfigarations(BordersViewConfiguration configuration)
+        public void SetConfigurations(BordersViewConfiguration configuration)
         {
             _configuration = configuration;
         }
@@ -21,7 +22,7 @@ namespace Assets.Scripts
         Color InterpolateColor(Color colorA, Color colorB, float time)
         {
             return new Color(Mathf.Lerp(colorA.r, colorB.r, time),
-                Mathf.Lerp(colorA.g, colorB.g, time), 
+                Mathf.Lerp(colorA.g, colorB.g, time),
                 Mathf.Lerp(colorA.b, colorB.b, time),
                 Mathf.Lerp(colorA.a, colorB.a, time));
         }

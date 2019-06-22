@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Core
 {
     public class Simulation : MonoBehaviour
     {
-        private float desiredVelocity = 1.0f;
+        private float _desiredVelocity = 1.0f;
         private MolecularModel _model;
         private MoleculesPool _moleculesPool;
-        private Dictionary<SupportedMolecules, List<GameObject>> _molecules = new Dictionary<SupportedMolecules, List<GameObject>>();
+        private readonly Dictionary<SupportedMolecules, List<GameObject>> _molecules = new Dictionary<SupportedMolecules, List<GameObject>>();
         private List<Rigidbody> _bodies = new List<Rigidbody>();
 
         public void Activate()
@@ -34,8 +34,14 @@ namespace Assets.Scripts
         {
             for (int i = 0; i < _bodies.Count; i++)
             {
-                _bodies[i].velocity = _bodies[i].velocity.normalized * desiredVelocity;
+                SetDesiredSpeed(_bodies[i]);
             }
+        }
+
+        void SetDesiredSpeed(Rigidbody body)
+        {
+            // при желании можно сделать итеративное изменение скорости
+            body.velocity = body.velocity.normalized * _desiredVelocity;
         }
 
         void Update()
@@ -68,7 +74,7 @@ namespace Assets.Scripts
         {
             GameObject currentMolecule = _moleculesPool.Build(type);
             Rigidbody rb = currentMolecule.GetComponent<Rigidbody>();
-            rb.velocity = Random.onUnitSphere * desiredVelocity;
+            rb.velocity = Random.onUnitSphere * _desiredVelocity;
             if (!_molecules.ContainsKey(type)) _molecules.Add(type, new List<GameObject>());
             _molecules[type].Add(currentMolecule);
             FillInBodies();
@@ -85,8 +91,7 @@ namespace Assets.Scripts
 
         public void ModelChanged(MolecularModel model)
         {
-            //throw new System.NotImplementedException();
-            desiredVelocity = model.DesiredVelocity;
+            _desiredVelocity = model.DesiredVelocity;
             _model = model;
         }
 

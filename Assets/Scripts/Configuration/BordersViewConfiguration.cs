@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Configuration
 {
     [CreateAssetMenu(fileName = "Borders View Configuration", menuName = @"Scriptable Object/ Borders View Configuration")]
     public class BordersViewConfiguration:ScriptableObject

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Assets.Scripts.Configuration;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Core
 {
     public class MolecularModelFactory
     {
@@ -19,7 +20,7 @@ namespace Assets.Scripts
         public MolecularModel Build()
         {
             var model = new MolecularModel();
-            model.DesiredVelocity = _configuration.MinMoleculesSpeed + _temperature * (_configuration.MaxMoleculesSpeed- _configuration.MinMoleculesSpeed);
+            model.DesiredVelocity = _configuration.MinMoleculesSpeed + _temperature * (_configuration.MaxMoleculesSpeed - _configuration.MinMoleculesSpeed);
             var totalMoleculesCount = _configuration.MinMoleculesCount +
                                       (_configuration.MaxMoleculesCount - _configuration.MinMoleculesCount) *
                                       (1.0f - _temperature);
