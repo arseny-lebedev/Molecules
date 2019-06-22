@@ -1,0 +1,36 @@
+# Visual Studio 2015 cache/options directory
+.vs/
+# Rider
+.idea/
+
+
+Library
+Temp
+Builds
+app_ios
+obj
+BuildReport
+BuildReport.meta
+*.sln
+*.csproj
+*.unityproj
+*.pidb
+*.suo
+*.userprefs
+*.lock
+*.DotSetting
+*.DS_Store
+
+*DotSettings.user
+*storage.ide
+
+/.vs
+/.idea
+
+AssetBundles/
+Assets/Plugins/Editor/JetBrains/
+Assets/Plugins/Editor.meta
+Assets/Plugins/Editor/JetBrains.meta
+Assets/EntityCache/
+Assets/EntityCache.meta
+Logs/
